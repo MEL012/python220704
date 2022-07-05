@@ -35,4 +35,41 @@ lst = [1,2,3,4,5,6,7,8,9,10]
 for i in lst:
     if i > 5:
         break
-    print("Item:{0}".foramt(i))
+    print("Item:{0}".format(i))
+
+print("---continue---")
+lst = [1,2,3,4,5,6,7,8,9,10]
+for i in lst:
+    if i % 2 == 0:
+        continue
+    print("Item:{0}".format(i))
+
+print("---range()---")
+print(list(range(10)))
+print(list(range(2000, 2023)))
+print(list(range(1, 32)))
+
+for i in range(5):
+    print(i)
+
+print("---리스트 컴프리헨션---")
+lst = list(range(1,11))
+print([i**2 for i in lst if i > 5])
+tp = ("apple", "orange", "kiwi")
+print([len(i) for i in tp])
+
+print("---필터함수---")
+lst = [10, 25, 30]
+iterL = filter(None, lst)
+for i in iterL:
+    print(i)
+
+# 함수 정의
+def getBiggerThan20(i):
+    return i > 20
+
+print("---필터함수 적용---")
+# iterL = filter(getBiggerThan20, lst)
+iterL = filter(lambda x: x>20, lst)
+for i in iterL:
+    print(i)
