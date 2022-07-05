@@ -5,7 +5,8 @@ class GString:
     def set(self, msg):
         self.str = msg
     def print(self):
-        print(str)
+        # print(str)    # 전역변수 호출
+        print(self.str)
 
 g = GString()
 g.set("First Message")
