@@ -17,3 +17,22 @@ print(g(3,4))
 print(g(5,6))
 print((lambda x:x*x)(3))
 print(globals())
+
+# 반복 구문
+value = 5
+while value > 0:
+    print(value)
+    value -= 1
+
+print("---구구단 출력---")
+for x in [2,3,4,5,6]:
+    print("{0}단 출력".format(x))
+    for y in [1,2,3,4,5,6,7,8,9]:
+        print("{0} * {1} = {2}".format(x, y, x*y))
+
+print("---break---")
+lst = [1,2,3,4,5,6,7,8,9,10]
+for i in lst:
+    if i > 5:
+        break
+    print("Item:{0}".foramt(i))
