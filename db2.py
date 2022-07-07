@@ -2,7 +2,7 @@
 import sqlite3
 
 # 메모리에서 작업
-con = sqlite3.connect(":memory:")
+con = sqlite3.connect("c:\\work\\python220704\\sample4.db")
 
 # 커서객체를 리턴
 cur = con.cursor()
@@ -24,5 +24,11 @@ cur.executemany("INSERT INTO PhoneBook values (?, ?);", datalist)
 
 # 검색
 cur.execute("SELECT * FROM PhoneBook;")
-for row in cur:
-    print(row)
+print("---fetchone()---")
+print(cur.fetchone())
+print("---fetchmany(2)---")
+print(cur.fetchmany(2))
+print("---fetchall()---")
+print(cur.fetchall())
+
+con.commit()
